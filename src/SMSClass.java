@@ -69,7 +69,8 @@ public class SMSClass {
 
     public          List<SMSCServer>    lstAllSMSCs     = new ArrayList<SMSCServer>();
     public          String              sLogFile        = "SendSMS.log";
-    public          String              sDefaultNumA    = "QOSPerf";
+    public          boolean             bIsLogEnabled   = false;
+    public          String              sDefaultNumA    = "QoSPerf";
     public          int                 nLogLevel       = SEVERE;
     private         boolean             bIsBounded      = false;
     private static  Session             tcpSession      = null;
@@ -445,7 +446,7 @@ public class SMSClass {
             default:        sLogLevelStr = "N/A";       break;
         }
 
-        if (v_nLogLevel >= this.nLogLevel) {
+        if ((v_nLogLevel >= this.nLogLevel) && (this.bIsLogEnabled)) {
             try {
                 File fLogFile = new File(this.sLogFile);
 
