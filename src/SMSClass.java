@@ -70,7 +70,7 @@ public class SMSClass {
     public          List<SMSCServer>    lstAllSMSCs     = new ArrayList<SMSCServer>();
     public          String              sLogFile        = "SendSMS.log";
     public          boolean             bIsLogEnabled   = false;
-    public          String              sDefaultNumA    = "QoSPerf";
+    public          String              sDefaultNumA    = "Sender";
     public          int                 nLogLevel       = SEVERE;
     private         boolean             bIsBounded      = false;
     private static  Session             tcpSession      = null;
