@@ -117,7 +117,7 @@ public class IniFile {
                 System.err.println("Parameter ("+v_Parameter+") for block ("+v_BlockName+") not found!");
                 throw new FileNotFoundException("Parameter ("+v_Parameter+") for block ("+v_BlockName+") not found!");
             } catch (IOException x) {
-                System.err.format("IO Exception: %s%n", x);
+                System.err.format("IOException: %s%n", x);
                 throw new FileNotFoundException("IOException");
             }
         }
